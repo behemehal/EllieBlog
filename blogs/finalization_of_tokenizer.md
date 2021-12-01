@@ -1,6 +1,8 @@
 ---
 publisher: @ahmtcn123
 title: Finalization of tokenizer
+updated_at: false
+updated_by: false
 description: We have some news about tokenizer and API changes
 date: 1.12.2021-00:00
 ---
