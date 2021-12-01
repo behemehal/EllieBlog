@@ -80,7 +80,7 @@ octokit.rest.users.getAuthenticated().then(async () => {
 
                         disq_id = await octokit.graphql(
                             `mutation {
-                                    createDiscussion(input: {repositoryId: "R_kgDOGdv8Ow", categoryId: "DIC_kwDOGdv8O84CAHDn", body: "The body", title: "The title"}) {
+                                    createDiscussion(input: {repositoryId: "R_kgDOGdv8Ow", categoryId: "DIC_kwDOGdv8O84CAHDn", body: "${parsedConf.description}", title: "${parsedConf.title}"}) {
                                       discussion {
                                         id
                                       }
