@@ -1,0 +1,26 @@
+name: Update blog
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: NPM install
+        run: npm install
+      - name: Deploy NodeJS app
+        run: node updateBlog.js
+      - name: Commit files
+        run: |
+          git config --local user.name ${{ secrets.COMMIT_ACCOUNT_NAME }}
+          git config --local user.mail ${{ secrets.COMMIT_ACCOUNT_MAIL }}
+          git add .
+          git commit -m "Auto updating blog"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

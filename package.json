@@ -1,0 +1,23 @@
+{
+  "name": "ellieblog",
+  "version": "1.0.0",
+  "description": "A blog written for Ellie Language. Updates himself at every push. Live at [EllieBlog](https://ellie.behemehal.net/blog.html)",
+  "main": "updateBlog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemehal/EllieBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/behemehal/EllieBlog/issues"
+  },
+  "homepage": "https://github.com/behemehal/EllieBlog#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}

@@ -1,6 +1,14 @@
+---
+publisher: @ahmtcn123
+title: Updates 13.11.2021
+description: We have some updates about syntax changes
+date: 02.12.2021-00:19
+---
+# Updates 13.11.2021
+
 ## Syntax Changes
 
-As we told in #55, we will rebuild parser and add tokenizer phase before that. We're expecting a performance and speed incrementation at least %22.
+As we told in #55, we will rebuild parser and add tokenizer phase before that. We're expecting a performance incrementation at least %22.
 
 ### Pending syntax changes
 

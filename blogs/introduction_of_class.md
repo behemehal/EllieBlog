@@ -1,4 +1,12 @@
-## Introduction of class
+---
+publisher: @ahmtcn123
+title: Introduction of class [Outdated]
+description: Meet the syntax of the class
+date: 24.06.2021-00:00
+---
+## Introduction of class [Outdated]
+
+This syntax is out of date please check this [page](https://ellie.behemehal.net/blog.html?page=finalization_of_tokenizer)
 
 Classes are on the way you can find example class below
 
