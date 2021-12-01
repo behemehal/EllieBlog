@@ -53,7 +53,7 @@ for (var i = 0; i < fileDir.length; i++) {
         var parsedConf = convertToObject(conf.map(x => parseKeyValue(x)));
         var correct = checkObject(parsedConf);
         if (correct) {
-            if (moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').isvalid()) {
+            if (moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').isValid()) {
                 files.push({
                     publisher: parsedConf.publisher,
                     title: parsedConf.title,
