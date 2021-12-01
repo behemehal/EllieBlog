@@ -13,6 +13,8 @@ jobs:
         run: npm install
       - name: Deploy NodeJS app
         run: node updateBlog.js
+        env:
+          API_KEY: ${{ secrets.DS }}
       - name: Commit files
         run: |
           git config --local user.name ${{ secrets.COMMIT_ACCOUNT_NAME }}
