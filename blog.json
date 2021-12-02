@@ -7,7 +7,8 @@
     "title": "Finalization of tokenizer",
     "description": "We have some news about tokenizer and API changes",
     "date": "2021-12-01T00:00:00+00:00",
-    "disq_id": "D_kwDOGdv8O84AOLhE"
+    "disq_id": "D_kwDOGdv8O84AOLhE",
+    "file_name": "finalization_of_tokenizer.md"
   },
   {
     "id": "1624492800000",
@@ -17,7 +18,8 @@
     "title": "Introduction of class [Outdated]",
     "description": "Meet the syntax of the class",
     "date": "2021-06-24T00:00:00+00:00",
-    "disq_id": "D_kwDOGdv8O84AOLhF"
+    "disq_id": "D_kwDOGdv8O84AOLhF",
+    "file_name": "introduction_of_class.md"
   },
   {
     "id": "1638403200000",
@@ -27,6 +29,7 @@
     "title": "Updates 13.11.2021",
     "description": "We have some updates about syntax changes",
     "date": "2021-12-02T00:00:00+00:00",
-    "disq_id": "D_kwDOGdv8O84AOLhG"
+    "disq_id": "D_kwDOGdv8O84AOLhG",
+    "file_name": "syntax_changes.md"
   }
 ]
