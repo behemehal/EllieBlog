@@ -8,7 +8,7 @@ date: 1.12.2021-00:00
 ---
 ## Finalization of tokenizer
 
-Tokenizer build is now complete. We're seeing massive improvements in our benchmars like we promissed (#55)
+Tokenizer build is now complete. We're seeing massive improvements in our benchmars like we promissed ([#55](https://github.com/behemehal/Ellie-Language/issues/55))
 
 Here is the benchmark results between v3.7.3 and tokenizer beta build:
 ```sh
@@ -54,6 +54,6 @@ class Test {
 
 ### API Change in `Future`;
 
-Future type is now non-std item. Instead of restricting access to std items we decided to give support for platforms whom supports it.  As for results future.ei and thread.ei removed from std 8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b
+Future type is now non-std item. Instead of restricting access to std items we decided to give support for platforms whom supports it.  As for results future.ei and thread.ei removed from std [8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b](https://github.com/behemehal/Ellie-Language/commit/8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b)
 
 Thanks for support, we're curious about your opinion about these updates please let us know
