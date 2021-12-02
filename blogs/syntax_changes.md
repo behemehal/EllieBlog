@@ -1,12 +1,12 @@
 ---
 publisher: @ahmtcn123
-title: Updates 13.11.2021
+title: Update 13.11.2021
 updated_at: false
 updated_by: false
 description: We have some updates about syntax changes
 date: 02.12.2021-00:19
 ---
-# Updates 13.11.2021
+# Update 13.11.2021
 
 ## Syntax Changes
 
