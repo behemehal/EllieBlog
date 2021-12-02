@@ -77,7 +77,8 @@ async function loop() {
                             title: parsedConf.title,
                             description: parsedConf.description,
                             date: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format(),
-                            disq_id
+                            disq_id,
+                            file_name: fileDir[i]
                         });
                     } else {
                         disq_id = await octokit.graphql(
@@ -98,7 +99,8 @@ async function loop() {
                             title: parsedConf.title,
                             description: parsedConf.description,
                             date: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format(),
-                            disq_id: disq_id.createDiscussion.discussion.id
+                            disq_id: disq_id.createDiscussion.discussion.id,
+                            file_name: fileDir[i]
                         });
                     }
 
