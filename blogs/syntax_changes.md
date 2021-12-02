@@ -4,7 +4,7 @@ title: Update 13.11.2021
 updated_at: false
 updated_by: false
 description: We have some updates about syntax changes
-date: 02.12.2021-00:19
+date: 02.12.2021-00.19
 ---
 # Update 13.11.2021
 
