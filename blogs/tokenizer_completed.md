@@ -1,3 +1,11 @@
+---
+publisher: @ahmtcn123
+title: Tokenizer build is complete
+updated_at: false
+updated_by: false
+description: After 29 days build is finally complete
+date: 4.12.2021-00.56
+---
 # Completion of tokenizer
 
 After 29 days of building & testing the tokenizer everything is works like expected. 
