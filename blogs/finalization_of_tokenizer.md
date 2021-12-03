@@ -8,7 +8,7 @@ date: 1.12.2021-00:00
 ---
 ## Finalization of tokenizer
 
-Tokenizer build is now complete. We're seeing massive improvements in our benchmars like we promissed (#55)
+Tokenizer elements and types are now complete. We're seeing massive improvements in our benchmars like we promissed (#55)
 
 Here is the benchmark results between v3.7.3 and tokenizer beta build:
 ```sh

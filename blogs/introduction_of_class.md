@@ -8,7 +8,7 @@ date: 24.06.2021-00:00
 ---
 ## Introduction of class [Outdated]
 
-This syntax is out of date please check this [page](https://ellie.behemehal.net/blog.html?page=finalization_of_tokenizer)
+This syntax is out of date please check this [page](https://ellie.behemehal.net/blog.html?page=finalization_of_tokenizer.md)
 
 Classes are on the way you can find example class below
 
