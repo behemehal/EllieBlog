@@ -4,7 +4,7 @@ title: Introduction of class [Outdated]
 updated_at: false
 updated_by: false
 description: Meet the syntax of the class
-date: 24.06.2021-00:00
+date: 24.06.2021-00.00
 ---
 ## Introduction of class [Outdated]
 

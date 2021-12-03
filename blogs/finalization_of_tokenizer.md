@@ -4,7 +4,7 @@ title: Finalization of tokenizer
 updated_at: false
 updated_by: false
 description: We have some news about tokenizer and API changes
-date: 1.12.2021-00:00
+date: 1.12.2021-00.00
 ---
 ## Finalization of tokenizer
 
@@ -54,6 +54,6 @@ class Test {
 
 ### API Change in `Future`;
 
-Future type is now non-std item. Instead of restricting access to std items we decided to give support for platforms whom supports it.  As for results future.ei and thread.ei removed from std 8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b
+Future type is now non-std item. Instead of restricting access to std items we decided to give support for platforms whom supports it.  As for results future.ei and thread.ei removed from std [8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b](https://github.com/behemehal/Ellie-Language/commit/8b0b6ba2adb727c84d20bbda9fdf906ee4894a0b)
 
 Thanks for support, we're curious about your opinion about these updates please let us know

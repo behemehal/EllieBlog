@@ -65,18 +65,18 @@ async function loop() {
             var parsedConf = convertToObject(conf.map(x => parseKeyValue(x)));
             var correct = checkObject(parsedConf);
             if (correct) {
-                if (moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').isValid()) {
+                if (moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').isValid()) {
                     var disq_id;
-                    if (blogJSON.findIndex(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format("x")) != -1) {
-                        disq_id = blogJSON.find(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH:mm')).disq_id;
+                    if (blogJSON.findIndex(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x")) != -1) {
+                        disq_id = blogJSON.find(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH.mm')).disq_id;
                         files.push({
-                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format("x"),
+                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x"),
                             publisher: parsedConf.publisher,
                             updated_at: parsedConf.updated_at,
                             updated_by: parsedConf.updated_by,
                             title: parsedConf.title,
                             description: parsedConf.description,
-                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format(),
+                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format(),
                             disq_id,
                             file_name: fileDir[i]
                         });
@@ -92,13 +92,13 @@ async function loop() {
                         );
 
                         files.push({
-                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format("x"),
+                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x"),
                             publisher: parsedConf.publisher,
                             updated_at: parsedConf.updated_at,
                             updated_by: parsedConf.updated_by,
                             title: parsedConf.title,
                             description: parsedConf.description,
-                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH:mm').format(),
+                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format(),
                             disq_id: disq_id.createDiscussion.discussion.id,
                             file_name: fileDir[i]
                         });
