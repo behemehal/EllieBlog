@@ -33,6 +33,7 @@
     "file_name": "syntax_changes.md"
   },
   {
+<<<<<<< HEAD
     "id": "1624525200000",
     "publisher": "@ahmtcn123",
     "updated_at": "false",
@@ -42,5 +43,16 @@
     "date": "2021-06-24T12:00:00+03:00",
     "disq_id": 0,
     "file_name": "introduction_of_class.md"
+=======
+    "id": "1638579360000",
+    "publisher": "@ahmtcn123",
+    "updated_at": "false",
+    "updated_by": "false",
+    "title": "Tokenizer build is complete",
+    "description": "After 29 days build is finally complete",
+    "date": "2021-12-04T00:56:00+00:00",
+    "disq_id": "D_kwDOGdv8O84AOMsi",
+    "file_name": "tokenizer_completed.md"
+>>>>>>> 69a915622eb04e42f74a4a8676602168bd088247
   }
 ]
