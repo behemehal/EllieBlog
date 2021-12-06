@@ -4,7 +4,7 @@ title: Tokenizer build is complete
 updated_at: false
 updated_by: false
 description: After 29 days build is finally complete
-date: 4.12.2021-00.56
+date: 4.12.2021-12.56
 ---
 # Completion of tokenizer
 

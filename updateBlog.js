@@ -65,18 +65,18 @@ async function loop() {
             var parsedConf = convertToObject(conf.map(x => parseKeyValue(x)));
             var correct = checkObject(parsedConf);
             if (correct) {
-                if (moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').isValid()) {
+                if (moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').isValid()) {
                     var disq_id;
-                    if (blogJSON.findIndex(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x")) != -1) {
-                        disq_id = blogJSON.find(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-HH.mm')).disq_id;
+                    if (blogJSON.findIndex(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').format("x")) != -1) {
+                        disq_id = blogJSON.find(x => x.id == moment(parsedConf.date, 'DD.MM.YYYY-hh.mm')).disq_id;
                         files.push({
-                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x"),
+                            id: moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').format("x"),
                             publisher: parsedConf.publisher,
                             updated_at: parsedConf.updated_at,
                             updated_by: parsedConf.updated_by,
                             title: parsedConf.title,
                             description: parsedConf.description,
-                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format(),
+                            date: moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').format(),
                             disq_id,
                             file_name: fileDir[i]
                         });
@@ -92,13 +92,13 @@ async function loop() {
                         );
 
                         files.push({
-                            id: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format("x"),
+                            id: moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').format("x"),
                             publisher: parsedConf.publisher,
                             updated_at: parsedConf.updated_at,
                             updated_by: parsedConf.updated_by,
                             title: parsedConf.title,
                             description: parsedConf.description,
-                            date: moment(parsedConf.date, 'DD.MM.YYYY-HH.mm').format(),
+                            date: moment(parsedConf.date, 'DD.MM.YYYY-hh.mm').format(),
                             disq_id: disq_id.createDiscussion.discussion.id,
                             file_name: fileDir[i]
                         });
@@ -114,6 +114,6 @@ async function loop() {
         }
 
     }
-    files.sort((a, b) => new moment(a.date).format() - new moment(b.date).format());
+    files = files.sort((a, b) => a.id - b.id).reverse();
     fs.writeFileSync("./blog.json", JSON.stringify(files, null, 2));
 }
