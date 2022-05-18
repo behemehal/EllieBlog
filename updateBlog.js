@@ -146,6 +146,7 @@ async function loop() {
                 }
               )
               .then(function (response) {
+                console.log("Webhook pushed");
                 //Success I guess
               })
               .catch(function (error) {
