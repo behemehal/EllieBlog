@@ -110,9 +110,9 @@ async function loop() {
                 avatar_url: "https://www.ellie-lang.org/img/EllieCharIcon.png",
                 embeds: [
                   {
-                    title: "New Post",
+                    title: parsedConf.title,
                     type: "article",
-                    description: "New article posted",
+                    description: parsedConf.description,
                     thumbnail: {
                       url: "https://www.ellie-lang.org/img/EllieCharIcon.png",
                     },
@@ -128,18 +128,6 @@ async function loop() {
                           "https://github.com/"
                         ) + ".png",
                     },
-                    fields: [
-                      {
-                        name: "Title",
-                        value: parsedConf.title,
-                        inline: true,
-                      },
-                      {
-                        name: "Description",
-                        value: parsedConf.description,
-                        inline: true,
-                      },
-                    ],
                     url:
                       "https://www.ellie-lang.org/blog.html?page=" + fileDir[i],
                   },
