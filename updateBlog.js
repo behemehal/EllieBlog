@@ -118,13 +118,13 @@ async function loop() {
                     },
                     color: "16181999",
                     author: {
-                      name: parsedConf.publisher.replace("@", ""),
-                      url: parsedConf.publisher.replace(
+                      name: parsedConf.publisher.toString().replace("@", ""),
+                      url: parsedConf.publisher.toString().replace(
                         "https://github.com/",
                         "@"
                       ),
                       icon_url:
-                        parsedConf.publisher.replace(
+                        parsedConf.publisher.toString().replace(
                           "https://github.com/",
                           "@"
                         ) + ".png",
