@@ -1,6 +1,7 @@
 var fs = require("fs");
 const moment = require("moment");
 var fileDir = fs.readdirSync("./blogs/");
+const axios = require("axios").default;
 const { Octokit, App } = require("octokit");
 
 //Parse key and value seperated by ':'
@@ -102,7 +103,6 @@ async function loop() {
                                   }`
             );
 
-            const axios = require("axios").default;
             axios
               .post(
                 `https://discord.com/api/webhooks/${process.env.webhookId}/${process.env.webhookToken}`,
@@ -149,7 +149,8 @@ async function loop() {
                 //Success I guess
               })
               .catch(function (error) {
-                console.log("A network error occured");
+                console.log("A network error occured", error);
+                process.exit(1);
               });
 
             files.push({
