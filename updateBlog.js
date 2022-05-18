@@ -106,7 +106,7 @@ async function loop() {
 
             axios
               .post(
-                `https://discord.com/api/webhooks/${process.env.webhookId}/${process.env.webhookToken}`,
+                `https://discord.com/api/webhooks/${process.env.WEBHOOK_ID}/${process.env.WEBHOOK_TOKEN}`,
                 {
                   username: "EllieBlog",
                   avatar_url:
@@ -151,7 +151,7 @@ async function loop() {
                 //Success I guess
               })
               .catch(function (error) {
-                if (process.env.webhookId == undefined || process.env.webhookToken == undefined) {
+                if (process.env.WEBHOOK_ID == undefined || process.env.WEBHOOK_TOKEN == undefined) {
                   console.error("Webhook not configured");
                 } else {
                   console.log("A network error occured");

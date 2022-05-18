@@ -11,6 +11,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: NPM install
         run: npm install
+      - name: create env file
+        run: |
+          touch .env
+          echo WEBHOOK_ID=${{ secrets.WEBHOOKID }} >> .env
+          echo WEBHOOK_TOKEN=${{ secrets.WEBHOOKTOKEN }} >> .env
       - name: Deploy NodeJS app
         run: node updateBlog.js
         env:
