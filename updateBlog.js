@@ -3,7 +3,7 @@ const moment = require("moment");
 var fileDir = fs.readdirSync("./blogs/");
 const axios = require("axios").default;
 const { Octokit, App } = require("octokit");
-require('dotenv').config();
+require("dotenv").config();
 
 //Parse key and value seperated by ':'
 function parseKeyValue(str) {
@@ -105,56 +105,51 @@ async function loop() {
             );
 
             axios
-              .post(
-                `https://discord.com/api/webhooks/${process.env.WEBHOOK_ID}/${process.env.WEBHOOK_TOKEN}`,
-                {
-                  username: "EllieBlog",
-                  avatar_url:
-                    "https://www.ellie-lang.org/img/EllieCharIcon.png",
-                  embeds: [
-                    {
-                      title: "New Post",
-                      type: "article",
-                      description: "New article posted",
-                      thumbnail: {
-                        url: "https://www.ellie-lang.org/img/EllieCharIcon.png",
-                      },
-                      color: "16181999",
-                      author: {
-                        name: parsedConf.publisher.replace("@", ""),
-                        url: parsedConf.publisher.replace(
+              .post(process.env.WEBHOOKURL, {
+                username: "EllieBlog",
+                avatar_url: "https://www.ellie-lang.org/img/EllieCharIcon.png",
+                embeds: [
+                  {
+                    title: "New Post",
+                    type: "article",
+                    description: "New article posted",
+                    thumbnail: {
+                      url: "https://www.ellie-lang.org/img/EllieCharIcon.png",
+                    },
+                    color: "16181999",
+                    author: {
+                      name: parsedConf.publisher.replace("@", ""),
+                      url: parsedConf.publisher.replace(
+                        "https://github.com/",
+                        "@"
+                      ),
+                      icon_url:
+                        parsedConf.publisher.replace(
                           "https://github.com/",
                           "@"
-                        ),
-                        icon_url:
-                          parsedConf.publisher.replace(
-                            "https://github.com/",
-                            "@"
-                          ) + ".png",
-                      },
-                      fields: [
-                        {
-                          name: "Title",
-                          value: "A new update",
-                          inline: true,
-                        },
-                      ],
-                      url:
-                        "https://www.ellie-lang.org/blog.html?page=" +
-                        fileDir[i],
+                        ) + ".png",
                     },
-                  ],
-                }
-              )
+                    fields: [
+                      {
+                        name: "Title",
+                        value: "A new update",
+                        inline: true,
+                      },
+                    ],
+                    url:
+                      "https://www.ellie-lang.org/blog.html?page=" + fileDir[i],
+                  },
+                ],
+              })
               .then(function (response) {
                 console.log("Webhook pushed");
                 //Success I guess
               })
               .catch(function (error) {
-                if (process.env.WEBHOOK_ID == undefined || process.env.WEBHOOK_TOKEN == undefined) {
+                if (process.env.WEBHOOKURL == undefined) {
                   console.error("Webhook not configured");
                 } else {
-                  console.log("A network error occured", error);
+                  console.log("A network error occured");
                 }
                 process.exit(1);
               });
