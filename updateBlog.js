@@ -154,7 +154,7 @@ async function loop() {
                 if (process.env.WEBHOOK_ID == undefined || process.env.WEBHOOK_TOKEN == undefined) {
                   console.error("Webhook not configured");
                 } else {
-                  console.log("A network error occured");
+                  console.log("A network error occured", err);
                 }
                 process.exit(1);
               });
