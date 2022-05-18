@@ -132,7 +132,12 @@ async function loop() {
                     fields: [
                       {
                         name: "Title",
-                        value: "A new update",
+                        value: parsedConf.title,
+                        inline: true,
+                      },
+                      {
+                        name: "Description",
+                        value: parsedConf.description,
                         inline: true,
                       },
                     ],
