@@ -15,7 +15,7 @@ jobs:
         run: node updateBlog.js
         env:
           API_KEY: ${{ secrets.DS }}
-          process.env.WEBHOOKURL: ${{ secrets.process.env.WEBHOOKURL }}
+          WEBHOOKURL: ${{ secrets.process.env.WEBHOOKURL }}
       - name: Commit files
         run: |
           git config --local user.name ${{ secrets.COMMIT_ACCOUNT_NAME }}
