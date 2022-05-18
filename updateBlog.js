@@ -3,6 +3,7 @@ const moment = require("moment");
 var fileDir = fs.readdirSync("./blogs/");
 const axios = require("axios").default;
 const { Octokit, App } = require("octokit");
+require('dotenv').config();
 
 //Parse key and value seperated by ':'
 function parseKeyValue(str) {
@@ -150,7 +151,11 @@ async function loop() {
                 //Success I guess
               })
               .catch(function (error) {
-                console.log("A network error occured", error);
+                if (process.env.webhookId == undefined || process.env.webhookToken == undefined) {
+                  console.error("Webhook not configured");
+                } else {
+                  console.log("A network error occured");
+                }
                 process.exit(1);
               });
 

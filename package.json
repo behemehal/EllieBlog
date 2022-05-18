@@ -19,6 +19,7 @@
   "homepage": "https://github.com/behemehal/EllieBlog#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "moment": "^2.29.1",
     "octokit": "^1.7.1"
   }
