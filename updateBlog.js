@@ -105,7 +105,7 @@ async function loop() {
             const axios = require("axios").default;
             axios
               .post(
-                "https://discord.com/api/webhooks/${process.env.webhookId}/${process.env.webhookToken}",
+                `https://discord.com/api/webhooks/${process.env.webhookId}/${process.env.webhookToken}`,
                 {
                   username: "EllieBlog",
                   avatar_url:
