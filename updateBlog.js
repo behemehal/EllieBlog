@@ -118,13 +118,13 @@ async function loop() {
                     },
                     color: "16181999",
                     author: {
-                      name: parsedConf.publisher.toString().replace("@", ""),
-                      url: parsedConf.publisher.toString().replace(
+                      name: parsedConf.publisher.replace("@", ""),
+                      url: parsedConf.publisher.replace(
                         "https://github.com/",
                         "@"
                       ),
                       icon_url:
-                        parsedConf.publisher.toString().replace(
+                        parsedConf.publisher.replace(
                           "https://github.com/",
                           "@"
                         ) + ".png",
@@ -154,7 +154,7 @@ async function loop() {
                 if (process.env.WEBHOOKURL == undefined) {
                   console.error("Webhook not configured");
                 } else {
-                  console.log("A network error occured", error);
+                  console.log("A network error occured", process.env.WEBHOOKURL.length);
                 }
                 process.exit(1);
               });
