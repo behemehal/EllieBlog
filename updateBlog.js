@@ -129,7 +129,7 @@ async function loop() {
                         ) + ".png",
                     },
                     url:
-                      "https://www.ellie-lang.org/blog.html?page=" + fileDir[i],
+                      "https://www.ellie-lang.org/blog" + fileDir[i].replace(".md", ""),
                   },
                 ],
               })
