@@ -58,7 +58,7 @@ async function createDiscussion(title, description) {
          }
        }`
    );
-   return data;
+   return disq_id;
 }
 
 async function readFile(fileLink) {
