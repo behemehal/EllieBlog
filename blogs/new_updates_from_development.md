@@ -13,7 +13,7 @@ Its been a while from last blog post and happy new year for everyone, we're wish
 
 ---
 
-![cli](https://github.com/behemehal/EllieBlog/blob/main/img/playground.png)
+![cli](https://raw.githubusercontent.com/behemehal/EllieBlog/main/img/playground.png)
 ## 1 - [Ellie Playground](https://playground.ellie-lang.org/)
 A quick drop by place for trying out ellie! And It proves mobility of ellie. In future you will be able to save and share your projects in playground.
 
